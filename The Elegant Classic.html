@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>عيادات النخبة الطبية | Elite Medical</title>
+<style>
+:root{
+--bg:#f7f8fa;--card:#fff;--text:#152238;--muted:#687386;
+--primary:#102a43;--secondary:#d5aa62;--border:#e4e8ee;
+--shadow:0 15px 45px rgba(16,42,67,.10);
+}
+.dark{--bg:#0d1724;--card:#142235;--text:#f5f7fa;--muted:#aab5c4;--border:#26374b}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Tahoma,sans-serif;background:var(--bg);color:var(--text);line-height:1.8;transition:.3s}
+a{text-decoration:none;color:inherit}
+.container{width:min(1150px,92%);margin:auto}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(15px);border-bottom:1px solid var(--border)}
+.dark header{background:rgba(13,23,36,.92)}
+nav{height:75px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:21px;color:var(--primary)}
+.dark .logo{color:#e6c47b}
+.logo svg{width:43px}
+.menu{display:flex;gap:25px;align-items:center}
+.menu a:hover{color:var(--secondary)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 22px;border-radius:9px;border:0;cursor:pointer;font-weight:bold;transition:.3s}
+.btn-gold{background:var(--secondary);color:#172333}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 10px 25px #d5aa6255}
+.hero{min-height:650px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:50px}
+.hero h1{font-size:clamp(38px,5vw,65px);line-height:1.15;margin-bottom:20px}
+.hero h1 span{color:var(--secondary)}
+.hero p{color:var(--muted);font-size:18px;margin-bottom:28px}
+.hero-img{height:510px;border-radius:25px;background:url("https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1000&q=85") center/cover;box-shadow:var(--shadow)}
+section{padding:90px 0}
+.section-title{text-align:center;margin-bottom:45px}
+.section-title h2{font-size:35px}
+.section-title p{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:30px;box-shadow:var(--shadow);transition:.3s}
+.card:hover{transform:translateY(-8px)}
+.icon{font-size:38px;margin-bottom:10px}
+.card p{color:var(--muted)}
+.doctor img,.avatar{width:85px;height:85px;border-radius:50%;object-fit:cover}
+.map{height:350px;border-radius:22px;overflow:hidden;background:#dce4e8;position:relative;box-shadow:var(--shadow)}
+.map iframe{width:100%;height:100%;border:0}
+.map-overlay{position:absolute;top:20px;right:20px;background:white;color:#102a43;padding:15px 20px;border-radius:12px;box-shadow:0 8px 25px #0002}
+.testimonial .stars{color:#d5aa62;font-size:22px}
+.form-box{max-width:850px;margin:auto;background:var(--card);padding:35px;border-radius:22px;box-shadow:var(--shadow)}
+form{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+input,select,textarea{width:100%;padding:15px;border:1px solid var(--border);border-radius:10px;background:var(--bg);color:var(--text);font:inherit}
+textarea{grid-column:1/-1;height:120px}
+form button{grid-column:1/-1}
+.social{display:flex;gap:10px}
+.social a{width:38px;height:38px;border-radius:50%;background:var(--primary);color:white;display:grid;place-items:center;font-size:13px}
+footer{background:var(--primary);color:white;padding:50px 0}
+footer .logo{color:#e6c47b}
+.floating{position:fixed;bottom:20px;left:20px;z-index:100;display:flex;flex-direction:column;gap:10px}
+.float-btn{width:48px;height:48px;border-radius:50%;border:0;cursor:pointer;background:var(--secondary);font-weight:bold;box-shadow:0 8px 25px #0003}
+.pulse{animation:pulse 2s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 12px #d5aa6200}}
+.reveal{opacity:0;transform:translateY(30px);transition:.7s}
+.reveal.show{opacity:1;transform:none}
+@media(max-width:800px){
+.hero{grid-template-columns:1fr}.hero-img{height:350px}.menu{display:none}.grid{grid-template-columns:1fr}
+form{grid-template-columns:1fr}textarea,form button{grid-column:auto}
+}
+</style>
+</head>
+
+<body>
+<header>
+<nav class="container">
+<a class="logo" href="#">
+<svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="22" fill="#d5aa62"/><path d="M21 12h8v9h9v8h-9v9h-8v-9h-9v-8h9z" fill="#102a43"/></svg>
+عيادات النخبة الطبية
+</a>
+<div class="menu">
+<a href="#home">الرئيسية</a><a href="#services">الخدمات</a><a href="#about">من نحن</a><a href="#doctors">الأطباء</a>
+<a class="btn btn-gold pulse" href="#booking">حجز موعد</a>
+</div>
+<div class="social">
+<a href="#">WA</a><a href="#">IG</a><a href="#">FB</a>
+</div>
+</nav>
+</header>
+
+<main id="home">
+<section class="container hero">
+<div class="reveal">
+<h1>رعاية طبية <span>تليق بك</span></h1>
+<p>رعاية صحية متكاملة تجمع بين الخبرة الطبية، التكنولوجيا الحديثة، والاهتمام الحقيقي بكل مريض.</p>
+<a href="#booking" class="btn btn-gold pulse">احجز استشارتك الآن</a>
+</div>
+<div class="hero-img reveal"></div>
+</section>
+
+<section id="services">
+<div class="container">
+<div class="section-title"><h2>خدماتنا الطبية</h2><p>حلول صحية متكاملة لك ولعائلتك</p></div>
+<div class="grid">
+<div class="card reveal"><div class="icon">🩺</div><h3>الكشف العام</h3><p>فحوصات وتشخيص شامل للحالة الصحية.</p></div>
+<div class="card reveal"><div class="icon">❤️</div><h3>أمراض القلب</h3><p>متابعة وتشخيص أمراض القلب والأوعية.</p></div>
+<div class="card reveal"><div class="icon">🧪</div><h3>الفحوصات الطبية</h3><p>تحاليل وفحوصات دقيقة بأحدث التقنيات.</p></div>
+</div>
+</div>
+</section>
+
+<section id="about">
+<div class="container section-title reveal">
+<h2>لماذا النخبة؟</h2>
+<p>فريق طبي متخصص، بيئة مريحة، وتجربة صحية تضع المريض أولًا.</p>
+</div>
+</section>
+
+<section id="doctors">
+<div class="container">
+<div class="section-title"><h2>فريقنا الطبي</h2></div>
+<div class="grid">
+<div class="card doctor reveal"><img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=300"><h3>د. أحمد محمود</h3><p>استشاري باطنة</p></div>
+<div class="card doctor reveal"><img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300"><h3>د. سارة علي</h3><p>استشاري قلب</p></div>
+<div class="card doctor reveal"><img src="https://images.unsplash.com/photo-1618498082410-b4aa22193b38?w=300"><h3>د. محمد سامي</h3><p>استشاري أسرة</p></div>
+</div>
+</div>
+</section>
+
+<!-- MAP IMMEDIATELY AFTER DOCTORS -->
+<section>
+<div class="container">
+<div class="section-title"><h2>موقع العيادة</h2><p>نحن بالقرب منك</p></div>
+<div class="map">
+<iframe src="https://www.google.com/maps?q=Cairo,Egypt&output=embed"></iframe>
+<div class="map-overlay">📍 القاهرة — مصر</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="section-title"><h2>آراء المرضى</h2><p>تجارب تساعدك على اتخاذ قرارك بثقة</p></div>
+<div class="grid">
+<div class="card testimonial reveal"><div class="stars">★★★★★</div><p>"تجربة ممتازة والتنظيم رائع جدًا."</p><b>محمد أحمد</b></div>
+<div class="card testimonial reveal"><div class="stars">★★★★★</div><p>"الدكتور شرح كل شيء بطريقة واضحة."</p><b>سارة محمود</b></div>
+<div class="card testimonial reveal"><div class="stars">★★★★★</div><p>"مكان محترم وفريق متعاون."</p><b>عمر حسن</b></div>
+</div>
+</div>
+</section>
+
+<section id="booking">
+<div class="container">
+<div class="section-title"><h2>احجز موعدك</h2><p>اترك بياناتك وسيتواصل معك فريقنا</p></div>
+<div class="form-box">
+<form onsubmit="submitForm(event)">
+<input required placeholder="الاسم بالكامل">
+<input required type="tel" placeholder="رقم الهاتف">
+<select required><option value="">اختر الخدمة</option><option>كشف عام</option><option>أمراض القلب</option><option>تحاليل طبية</option></select>
+<textarea placeholder="ملاحظات إضافية"></textarea>
+<button class="btn btn-gold" type="submit">إرسال طلب الحجز</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container">
+<div class="logo">✚ عيادات النخبة الطبية</div>
+<p>رعاية صحية موثوقة تبدأ من هنا.</p>
+<div class="social"><a href="#">WA</a><a href="#">IG</a><a href="#">FB</a><a href="#">TT</a><a href="#">in</a></div>
+</div>
+</footer>
+
+<div class="floating">
+<button class="float-btn" onclick="toggleLang()">EN</button>
+<button class="float-btn" onclick="toggleMode()">☾</button>
+</div>
+
+<script>
+const texts={ar:{},en:{}};
+function toggleMode(){document.body.classList.toggle("dark")}
+function toggleLang(){
+let en=document.documentElement.lang==="en";
+document.documentElement.lang=en?"ar":"en";
+document.documentElement.dir=en?"rtl":"ltr";
+document.querySelector(".float-btn").textContent=en?"EN":"ع";
+alert(en?"Language switched to Arabic":"تم التبديل للإنجليزية");
+}
+function submitForm(e){e.preventDefault();alert("تم استلام طلبك بنجاح، سنتواصل معك قريبًا.");e.target.reset()}
+const observer=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add("show")}),{threshold:.12});
+document.querySelectorAll(".reveal").forEach(e=>observer.observe(e));
+</script>
+</body>
+</html>
